@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "web-content-distiller"
+version = "0.1.0"
+description = "Zero-dependency web page scraper and DOM condenser outputting clean Markdown for web AI agents"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+web-content-distiller = "web_content_distiller.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["web_content_distiller*"]
